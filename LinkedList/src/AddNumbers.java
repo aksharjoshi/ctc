@@ -68,18 +68,25 @@ public class AddNumbers {
 		
 		String res=add+"";
 		
-		Node[] re = new Node[res.length()];
+//		Node re[res.length()];
+		
+		// = new Node[res.length()];
+		
 		System.out.println(res.length());
-		for(int i=res.length()-1; i>=0; i--){
+		//re[2].data=20;
+		/*for(int i=res.length()-1; i>=0; i--){
+			//System.out.println("i in re = " + i + "   char at: "+res.charAt(i));
+			re[i].data = res.charAt(i);
+		}*/
+		
+		//System.out.println(re);
+		/*System.out.println(re[0].getClass());
+		for(int i=0; i<res.length()-1; i++){
 			re[i].data = res.charAt(i);
 		}
 		
-		for(int i=0; i<res.length()-1; i++){
-			re[i].next = re[i+1];
-		}
-		
 		System.out.println(re);
-		
+		*/
 	}
 
 }
@@ -89,7 +96,12 @@ class Node {
 	int data;
 	Node next;
 	
+	Node(){
+		data=0;
+		next=null;
+	}
 	Node(int data){
 		this.data = data;
+		next=null;
 	}
 }
